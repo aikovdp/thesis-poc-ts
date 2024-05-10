@@ -1,1 +1,1 @@
-type Action<Input, Output> = (input: Input) => Output | Promise<Output>
+type Action<Input, Output> = (input: Input) => Promise<Output>
