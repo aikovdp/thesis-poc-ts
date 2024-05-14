@@ -1,3 +1,5 @@
+import { Action } from "../action";
+
 export const getGitHubUserAction: Action<GetGitHubUserActionInput, GithubUser> = async (input) => {
 
   const res = await fetch(`https://api.github.com/users/${input.username}`)
