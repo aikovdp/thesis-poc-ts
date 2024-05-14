@@ -16,11 +16,10 @@ const users = sqliteTable('users', {
 const db = drizzle(new Database('database.db'), {schema: {users: users}})
 
 export const getDbUser: Action<GetDbUserActionInput, DbUser | undefined> = async (input) => {
-  const user = await db.query.users.findFirst({
+  return await db.query.users.findFirst({
     where: eq(users.username, input.username)
     
   })
-  return user
 }
 
 interface GetDbUserActionInput {
