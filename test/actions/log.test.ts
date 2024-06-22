@@ -1,6 +1,7 @@
 import { expect, test, vi } from 'vitest'
 import { logAction } from '../../src/actions/log'
 import winston from 'winston'
+import { createContext } from '../../src/context'
 
 test('logs info message', async () => {
   const transport = new winston.transports.Console()
@@ -10,7 +11,7 @@ test('logs info message', async () => {
     level: "info",
     message: "This is a test",
     logger: winston.createLogger({transports: transport})
-  })
+  }, createContext())
 
   expect(transportSpy).toHaveBeenCalled()
 })
