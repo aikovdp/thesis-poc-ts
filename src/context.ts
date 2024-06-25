@@ -1,3 +1,5 @@
+import { Attributes } from "./attributes.js";
+
 export interface WorkflowContext {
   output: WorkflowOutput;
 }

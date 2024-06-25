@@ -1,4 +1,4 @@
-import { Action } from "../action";
+import { Action } from "../action.js";
 
 export const setAttributeAction: Action<SetAttributeInput, void> = async (input, context) => {
   const { attributes } = context.output

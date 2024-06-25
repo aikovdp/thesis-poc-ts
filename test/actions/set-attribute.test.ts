@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
-import { setAttributeAction } from "../../src/actions/set-attribute";
-import { createContext } from "../../src/context";
+import { setAttributeAction } from "../../src/actions/set-attribute.js";
+import { createContext } from "../../src/context.js";
 
 test("Adds attribute to output", async () => {
   const context = createContext();

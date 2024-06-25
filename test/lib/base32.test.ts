@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import * as base32 from "../../src/lib/base32";
+import * as base32 from "../../src/lib/base32.js";
 
 const decoder = new TextDecoder();
 

@@ -1,5 +1,5 @@
 import winston from "winston"
-import { Action } from "../action"
+import { Action } from "../action.js"
 
 export const logAction: Action<LogActionInput, void> = async (input) => {
   const logger = input.logger ?? winston.createLogger({
